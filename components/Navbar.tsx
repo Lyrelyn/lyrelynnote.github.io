@@ -71,7 +71,7 @@ export default function Navbar() {
   const navLinks = [
     { name: '首页', href: '/' },
     // { name: '项目', href: '/projects' },
-    { name: '归档', href: '/timeline' },
+    { name: '博客', href: '/timeline' },
     { name: '照片墙', href: '/photowall' },
     { name: '音乐', href: '/music' },
     { name: '杂谈', href: '/moments' },
@@ -88,7 +88,7 @@ export default function Navbar() {
           <Link href="/" className="text-xl font-black text-slate-800 dark:text-white tracking-tighter hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300">
             {siteConfig.navTitle || siteConfig.authorName}
             <span className="text-indigo-500 mx-1">{siteConfig.navSuffix || 'の'}</span>
-            {siteConfig.navAfter || '宝藏之地'}
+            {siteConfig.navAfter || '小屋'}
           </Link>
           <nav className="flex gap-8 text-sm font-bold">
             {/* PC端依然使用全量的 navLinks */}
