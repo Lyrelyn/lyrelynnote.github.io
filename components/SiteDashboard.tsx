@@ -44,11 +44,11 @@ export default function SiteDashboard() {
       {/* 中间与右侧：状态信息 */}
       <div className="flex-1 px-6 py-4 md:py-0 flex flex-wrap items-center justify-between gap-4 text-xs md:text-sm font-bold text-slate-600 dark:text-slate-300">
 
-        {/* 运行时间 */}
+        {/* 运行时间
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
           <span>系统已稳定运行：<span className="text-indigo-600 dark:text-indigo-400 font-black">{uptimeStr}</span></span>
-        </div>
+        </div> */}
 
         {/* 技术栈徽章 (🌟 动态映射 siteConfig 里的数组) */}
         <div className="flex gap-2">

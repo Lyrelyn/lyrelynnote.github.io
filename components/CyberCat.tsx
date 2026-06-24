@@ -38,24 +38,20 @@ export default function CyberCat() {
 
     setShowInput(false); // 喂食时关掉输入框
     setIsThinking(true);
-    speak("嗷呜！真好吃喵！本喵吃饱了要说两句...", 6000);
+    speak("嗷呜！真好吃喵！", 4000);
 
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: "我刚刚喂了你一条美味的小鱼干！你有什么表示？" }),
-      });
-
-      if (!res.ok) throw new Error('API Error');
-
-      const data = await res.json();
-      speak(data.reply, 8000);
-    } catch (error) {
-      speak("吧唧吧唧... 鱼干好吃，但本喵卡壳了喵...", 4000);
-    } finally {
+    setTimeout(() => {
+      const replies = [
+        "吧唧吧唧... 鱼干真好吃喵~",
+        "铲屎官今天表现不错喵！",
+        "本喵吃饱了，心情好喵呜~",
+        "下次还要小鱼干喵！",
+        "喵~ 这是本喵最喜欢的零食！",
+      ];
+      const randomReply = replies[Math.floor(Math.random() * replies.length)];
+      speak(randomReply, 6000);
       setIsThinking(false);
-    }
+    }, 1500);
   };
 
   // --- 💬 交互事件：发送聊天 ---
@@ -67,24 +63,20 @@ export default function CyberCat() {
     setInputValue('');
     setShowInput(false);
     setIsThinking(true);
-    speak("让本喵想想喵...", 10000);
+    speak("让本喵想想喵...", 2000);
 
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMessage }),
-      });
-
-      if (!res.ok) throw new Error('API Error');
-
-      const data = await res.json();
-      speak(data.reply, 8000);
-    } catch (error) {
-      speak("铲屎官的网线被老鼠咬断了吧？喵！", 4000);
-    } finally {
+    setTimeout(() => {
+      const replies = [
+        "喵喵喵~",
+        "喵呜~ 听不懂喵~",
+        "本喵只是一只小猫咪喵~",
+        "喵？铲屎官在说什么喵？",
+        "喵喵~ 本喵只会喵喵叫喵！",
+      ];
+      const randomReply = replies[Math.floor(Math.random() * replies.length)];
+      speak(randomReply, 6000);
       setIsThinking(false);
-    }
+    }, 2000);
   };
 
   // --- ⏳ 随机挂机语录 ---

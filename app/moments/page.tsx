@@ -7,7 +7,7 @@ import MomentList from './MomentList';
 import { siteConfig } from '../../siteConfig';
 
 export const metadata = {
-  title: "说说 | " + siteConfig.title,
+  title: "杂谈 | " + siteConfig.title,
   description: "生活动态与瞬间记录",
 };
 
@@ -43,7 +43,7 @@ export default function MomentsPage() {
     allMoments = Array.from(new Map(allMoments.map(item => [item.id, item])).values());
 
   } catch (e) {
-    console.error("读取说说数据失败:", e);
+    console.error("读取杂谈数据失败:", e);
   }
 
   return (
