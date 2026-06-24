@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "Lyrelyn の 小屋",
   faviconUrl: "https://bu.dusays.com/2026/03/24/69c1e38ac1846.jpg",
   authorName: "Lyrelyn",
-  bio: "在代码、学术与分子动力学模拟间穿梭的普通人。近期正埋头于 GROMACS 模拟研究与神经网络计算。",
+  bio: "在代码模拟间穿梭的普通人。",
 
   navTitle: "Lyrelyn",
 
@@ -31,16 +31,19 @@ export const siteConfig = {
   photoWallImage: "https://bu.dusays.com/2026/03/24/69c1e38b4c370.jpg",
   cloudMusicIds: ["1809646618", "3361076230", "1859390262"],
   social: {
-    github: "",
+    github: "https://github.com/Lyrelyn",
     gitee: "",
     google: "",
     email: "",
-    qq: "1124533793",
-    wechat: "XingHuisama",
+    qq: "1395920758",
+    wechat: "xc18979404329",
   },
   counts: {
     photos: 128, // 照片墙数量可以手动写死或动态计算
   },
+  blogTitle: "博客", // 你可以改成任何你喜欢的名字
+  blogDescription: "代码、学术、提瓦特与泰拉大陆的碎片记录",
+
 
   // 👇 【新增】：全局背景弹幕配置
   danmakuList: ["在干嘛呢？", "有笨蛋嘛？", "前方高能反应！", "GROMACS 跑起来了吗？", "MD 模拟什么时候才能出图啊", "Graph Neural Networks 炼丹中...", "BUG 修复进度 99%", "今天背单词了吗？", "Tailwind CSS 拯救前端", "写算法中", "睡大觉中", "到底在干嘛？"],
