@@ -1,105 +1,36 @@
-# Lyrelyn's Notes
-
-Personal blog built with **Next.js 15**, **TypeScript**, **Tailwind CSS 4**, and **MDX**. Deployed on Vercel.
-
-## Features
-
-- MDX content with custom React components (Callout, CodeBlock)
-- Dark mode with system preference detection
-- Tag-based filtering
-- RSS feed, sitemap, and full SEO (Open Graph, Twitter Cards)
-- Giscus comments powered by GitHub Discussions
-- Framer Motion animations
-- Velite for type-safe content
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
+First, run the development server:
+
 ```bash
-# Install dependencies
-npm install
-
-# Start dev server
 npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Writing Content
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Blog Posts
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Create `.mdx` files in `content/blog/`:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```mdx
----
-title: "My Post Title"
-description: "A short description for SEO and previews"
-publishedAt: "2026-06-24"
-tags: ["nextjs", "typescript"]
-featured: false
-draft: false
----
+## Learn More
 
-Your content here...
-```
+To learn more about Next.js, take a look at the following resources:
 
-### Projects
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Create `.mdx` files in `content/projects/`:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```mdx
----
-title: "Project Name"
-description: "What this project does"
-url: "https://..."
-github: "https://..."
-tags: ["react", "nodejs"]
-featured: true
-order: 1
----
+## Deploy on Vercel
 
-Project details...
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Project Structure
-
-```
-src/
-├── app/              # Next.js App Router pages
-├── components/       # React components
-│   └── mdx/          # Custom MDX components
-├── lib/              # Utility functions
-└── types/            # TypeScript types
-content/
-├── blog/             # Blog posts (.mdx)
-└── projects/         # Project showcases (.mdx)
-public/               # Static assets
-```
-
-## Deployment (Vercel)
-
-1. Push the repo to GitHub
-2. Go to [vercel.com](https://vercel.com) → Import Project
-3. Vercel auto-detects Next.js — no config needed
-4. Set environment variables if needed
-5. Deploy!
-
-## Customization
-
-Edit `src/lib/constants.ts` to update:
-
-- Site title, description, and URL
-- Social links
-- Navigation items
-- Giscus configuration (repo ID, category ID)
-
-## Giscus Setup
-
-1. Enable [GitHub Discussions](https://docs.github.com/en/discussions) on your repo
-2. Install the [Giscus app](https://github.com/apps/giscus)
-3. Visit [giscus.app](https://giscus.app) to get your `repoId` and `categoryId`
-4. Update `GISCUS_CONFIG` in `src/lib/constants.ts`
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
