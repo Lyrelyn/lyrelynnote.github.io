@@ -18,10 +18,10 @@ export default function SiteDashboard() {
       setTimeStr(now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' }));
 
       // 计算运行时间
-      const diff = now.getTime() - START_DATE;
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      setUptimeStr(`${days}天 ${hours}小时`);
+      // const diff = now.getTime() - START_DATE;
+      // const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      // const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      // setUptimeStr(`${days}天 ${hours}小时`);
     };
 
     updateTime(); // 初始执行一次
@@ -64,7 +64,7 @@ export default function SiteDashboard() {
         </div>
 
         {/* 备案信息 (🌟 从 siteConfig 读取链接和名称) */}
-        {siteConfig.icpConfig && (
+        {/* {siteConfig.icpConfig && (
           <a
             href={siteConfig.icpConfig.link}
             target="_blank"
@@ -73,7 +73,7 @@ export default function SiteDashboard() {
           >
             {siteConfig.icpConfig.name}
           </a>
-        )}
+        )} */}
 
       </div>
     </div>
