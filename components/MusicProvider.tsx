@@ -89,15 +89,18 @@ export function MusicProvider({ children }: { children: ReactNode }) {
 
         const mergedPlaylist = rawResults
           .filter((song: any) => song && song.url && !song.error)
-          .map((song: any) => ({
-            id: song.id || Math.random().toString(),
-            title: song.name || '未知歌曲',
-            artist: song.artist || song.author || '未知歌手',
-            cover: song.cover || song.pic || 'https://bu.dusays.com/2026/03/24/69c24230a5ff8.jpg',
-            src: song.url,
-            lrcUrl: null,
-            lyrics: song.lrc ? parseLrc(song.lrc) : []
-          }));
+          .map((song: any) => {
+            const lrcIsUrl = typeof song.lrc === 'string' && song.lrc.startsWith('http');
+            return {
+              id: song.id || Math.random().toString(),
+              title: song.name || '未知歌曲',
+              artist: song.artist || song.author || '未知歌手',
+              cover: song.cover || song.pic || 'https://bu.dusays.com/2026/03/24/69c24230a5ff8.jpg',
+              src: song.url,
+              lrcUrl: lrcIsUrl ? song.lrc : null,
+              lyrics: (!lrcIsUrl && song.lrc) ? parseLrc(song.lrc) : []
+            };
+          });
 
         if (isMounted) {
           if (mergedPlaylist.length > 0) setPlaylist(mergedPlaylist);
