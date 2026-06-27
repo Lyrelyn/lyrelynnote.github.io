@@ -29,12 +29,12 @@ export const siteConfig = {
 
   // 5. 首页照片墙预览图
   photoWallImage: "https://bu.dusays.com/2026/03/24/69c1e38b4c370.jpg",
-  cloudMusicIds: ["1809646618", "3361076230", "1859390262"],
+  cloudMusicIds: ["1499313762","399367387","26209670","1952215203","672188"],
   social: {
     github: "https://github.com/Lyrelyn",
     gitee: "",
     google: "",
-    email: "",
+    email: "1395920758@qq.com",
     qq: "1395920758",
     wechat: "xc18979404329",
   },
